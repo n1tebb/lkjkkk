@@ -3,47 +3,48 @@
 using namespace std;
 
 int main() {
-    int a, b, c;
-    char ope;
+    // Объявление переменных
+    double firstNumber, secondNumber, result;
+    char operation;
 
-    cout << "введи число: " << endl;
-    cin >> a;
-    cout << "введи второе число: : " << endl;
-    cin >> b;
+    // Ввод данных от пользователя
+    cout << "Введите первое число: ";
+    cin >> firstNumber;
 
-    cout << "введи операцию (+, -, *, /, %): ";
-    cin >> ope;
+    cout << "Введите операцию (+, -, *, /, %): ";
+    cin >> operation;
 
-    if (ope == '+') {
-        c = a + b;
-        cout << "результат: " << c << endl;
+    cout << "Введите второе число: ";
+    cin >> secondNumber;
+
+    // Выполнение выбранной операции
+    if (operation == '+') {
+        result = firstNumber + secondNumber;
+        cout << "Результат: " << firstNumber << " + " << secondNumber << " = " << result << endl;
     }
-    else if (ope == '-') {
-        c = a - b;
-        cout << "результат: " << c << endl;
+    else if (operation == '-') {
+        result = firstNumber - secondNumber;
+        cout << "Результат: " << firstNumber << " - " << secondNumber << " = " << result << endl;
     }
-    else if (ope == '*') {
-        c = a * b;
-        cout << "результат: " << c << endl;
+    else if (operation == '*') {
+        result = firstNumber * secondNumber;
+        cout << "Результат: " << firstNumber << " * " << secondNumber << " = " << result << endl;
     }
-    else if (ope == '/') {
-        if (b != 0) {
-            c = a / b;
-            cout << "результат: " << c << endl;
+    else if (operation == '/') {
+        if (secondNumber != 0) {
+            result = firstNumber / secondNumber;
+            cout << "Результат: " << firstNumber << " / " << secondNumber << " = " << result << endl;
         } else {
-            cout << "ошибка: Деление на ноль!" << endl;
+            cout << "Ошибка: Деление на ноль запрещено!" << endl;
         }
     }
-    else if (ope == '%') {
-        if (b != 0) {
-            c = a % b;
-            cout << "результат: " << c << endl;
-        } else {
-            cout << "Ошибка: Деление на ноль!" << endl;
-        }
+    else if (operation == '%') {
+        // Нахождение процента от числа
+        result = (firstNumber / 100) * secondNumber;
+        cout << "Резульат: " << secondNumber << "% of " << firstNumber << " = " << result << endl;
     }
     else {
-        cout << "ввыбрана не верная операция" << endl;
+        cout << "Ошибка! Неверная операция!" << endl;
     }
 
     return 0;
