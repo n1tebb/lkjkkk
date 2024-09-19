@@ -37,7 +37,7 @@ int main() {
     }
     else if (operation == '%') {
         result = (firstNumber / 100) * secondNumber;
-        cout << "Резульат: " << secondNumber << "% of " << firstNumber << " = " << result << endl;
+        cout << "Резульат: " << secondNumber << "% от " << firstNumber << " = " << result << endl;
     }
     else {
         cout << "Ошибка! Неверная операция!" << endl;
