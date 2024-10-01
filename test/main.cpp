@@ -3,16 +3,12 @@
 
 
 int main() {
-    srand(time(NULL));
-    int a = 0;
-    a = rand() % 6 + 5;
-    
     const int size = 20;
     int arr[size];
     
     for (int i = 0; i < size; i++)
     {
-        arr[i] = a;
+        arr[i] = std::rand() % 6 + 5;
     }
     
     for (int i = 0; i < size; i++)
